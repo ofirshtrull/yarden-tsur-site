@@ -46,9 +46,3 @@ document.addEventListener('DOMContentLoaded', function () {
     loadTrack(currentTrack);
 });
 
-document.addEventListener('keydown', function (event) {
-    // Check if Shift and '+' or '-' keys are pressed
-    if (event.shiftKey && (event.key === '+' || event.key === '-')) {
-        event.preventDefault();
-    }
-});
