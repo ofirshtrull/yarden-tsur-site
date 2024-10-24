@@ -1,5 +1,3 @@
-// scripts.js
-
 document.addEventListener('DOMContentLoaded', function () {
     const audioPlayer = document.getElementById('audio-player');
     const playlist = document.getElementById('playlist');
@@ -10,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const src = tracks[index].getAttribute('data-src');
         audioPlayer.src = src;
         updatePlaylistStyles(index);
+        audioPlayer.playbackRate = 1; // Ensure playback rate is normal
     }
 
     function updatePlaylistStyles(index) {
@@ -23,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
         tracks[i].addEventListener('click', function () {
             currentTrack = i;
             loadTrack(currentTrack);
-            audioPlayer.play(); // Play the selected track
+            audioPlayer.play();
         });
     }
 
@@ -33,9 +32,23 @@ document.addEventListener('DOMContentLoaded', function () {
             currentTrack = 0;
         }
         loadTrack(currentTrack);
-        audioPlayer.play(); // Automatically play the next track
+        audioPlayer.play();
+    });
+
+    // Prevent playback speed changes
+    audioPlayer.addEventListener('ratechange', function () {
+        if (audioPlayer.playbackRate !== 1) {
+            audioPlayer.playbackRate = 1;
+        }
     });
 
     // Initialize without auto-playing
     loadTrack(currentTrack);
+});
+
+document.addEventListener('keydown', function (event) {
+    // Check if Shift and '+' or '-' keys are pressed
+    if (event.shiftKey && (event.key === '+' || event.key === '-')) {
+        event.preventDefault();
+    }
 });
