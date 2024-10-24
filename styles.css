@@ -1,11 +1,12 @@
 /* Global Styles */
+html,
 body {
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #ffffff;
     background: linear-gradient(to right, #1e3c72, #2a5298);
-    min-height: 100vh;
+    min-height: 100%;
 }
 
 /* Container */
@@ -128,13 +129,18 @@ footer {
     background-color: #1a1a1a;
     color: #bbb;
     font-size: 0.9rem;
-    position: fixed;
+    /* Remove fixed positioning */
+    /* position: fixed;
     bottom: 0;
-    width: 100%;
+    width: 100%; */
+    /* Add top margin to separate from content */
+    margin-top: 40px;
 }
 
 /* Responsive Design */
 @media (max-width: 600px) {
+
+    /* Adjust styles for mobile devices */
     header h1 {
         font-size: 2rem;
     }
@@ -159,5 +165,11 @@ footer {
 
     section {
         padding: 15px;
+    }
+
+    /* Adjust footer padding */
+    footer {
+        padding: 10px;
+        font-size: 0.8rem;
     }
 }
