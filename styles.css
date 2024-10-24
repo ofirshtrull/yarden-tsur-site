@@ -68,7 +68,8 @@ header .social-media,
 .social-media img {
     width: 32px;
     height: 32px;
-    filter: invert(1);
+    /* Remove or comment out the filter property */
+    /* filter: invert(1); */
 }
 
 /* Sections */
