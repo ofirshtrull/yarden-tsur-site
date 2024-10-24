@@ -51,9 +51,11 @@ header .social-media,
     border-radius: 50%;
     border: 4px solid #fff;
     object-fit: cover;
-    object-position: 50% 20%;
-    /* Adjust vertical position */
+    object-position: center 25%;
+    /* Adjust vertical position as needed */
     margin-bottom: 20px;
+    position: relative;
+    z-index: 2;
 }
 
 /* Social Media Icons */
