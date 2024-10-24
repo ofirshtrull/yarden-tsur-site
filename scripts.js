@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', function () {
     function loadTrack(index) {
         const src = tracks[index].getAttribute('data-src');
         audioPlayer.src = src;
-        audioPlayer.play();
         updatePlaylistStyles(index);
     }
 
@@ -24,6 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
         tracks[i].addEventListener('click', function () {
             currentTrack = i;
             loadTrack(currentTrack);
+            audioPlayer.play(); // Play the selected track
         });
     }
 
@@ -33,8 +33,9 @@ document.addEventListener('DOMContentLoaded', function () {
             currentTrack = 0;
         }
         loadTrack(currentTrack);
+        audioPlayer.play(); // Automatically play the next track
     });
 
-    // Initialize
+    // Initialize without auto-playing
     loadTrack(currentTrack);
 });

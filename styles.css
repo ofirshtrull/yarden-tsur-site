@@ -27,18 +27,21 @@ header {
 header::after {
     content: '';
     background-color: rgba(0, 0, 0, 0.5);
+    /* Overlay */
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    z-index: 1;
 }
 
 header h1,
 header p,
-header .social-media {
+header .social-media,
+.profile-photo {
     position: relative;
-    z-index: 1;
+    z-index: 2;
 }
 
 .profile-photo {
@@ -47,18 +50,9 @@ header .social-media {
     border-radius: 50%;
     border: 4px solid #fff;
     object-fit: cover;
+    object-position: 50% 20%;
+    /* Adjust vertical position */
     margin-bottom: 20px;
-}
-
-header h1 {
-    font-size: 3.5rem;
-    margin: 0;
-    letter-spacing: 2px;
-}
-
-header p {
-    font-size: 1.5rem;
-    margin: 10px 0;
 }
 
 /* Social Media Icons */
@@ -111,6 +105,11 @@ section h2 {
     background-color: rgba(255, 255, 255, 0.2);
 }
 
+.current-track {
+    background-color: rgba(255, 255, 255, 0.3);
+    font-weight: bold;
+}
+
 /* Contact Section */
 #contact a {
     color: #ffdd57;
@@ -136,15 +135,28 @@ footer {
 /* Responsive Design */
 @media (max-width: 600px) {
     header h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
     header p {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 
     .profile-photo {
-        width: 120px;
-        height: 120px;
+        width: 100px;
+        height: 100px;
+    }
+
+    .social-media img {
+        width: 24px;
+        height: 24px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    section {
+        padding: 15px;
     }
 }
