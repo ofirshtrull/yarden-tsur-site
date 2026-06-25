@@ -7,80 +7,83 @@
     <meta name="theme-color" content="#231a10">
     <script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');</script>
 
-    <!-- Favicon Icons -->
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="assets/icons/favicon-96.png">
-    <link rel="icon" type="image/png" sizes="120x120" href="assets/icons/favicon-120.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/icons/favicon-16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/icons/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../assets/icons/favicon-96.png">
+    <link rel="icon" type="image/png" sizes="120x120" href="../assets/icons/favicon-120.png">
 
-    <title>Denny Tsur — Composer for Film, Theatre & Animation</title>
+    <title>Denny Tsur — Press Kit</title>
     <meta name="description"
-        content="Denny Tsur (Yarden Tsur) is an award-winning Atlanta-based composer and producer. She scores animated TV series broadcast worldwide, plus theatre, film, and pop. Eurovision finalist. Listen to the work and start a project.">
-    <meta name="keywords"
-        content="Denny Tsur, Yarden Tsur, Composer, Film Composer, Theatre Composer, Children's Music, Animation Music, Music Producer, Winnie the Pooh Musical, Eurovision, Original Soundtracks, Atlanta, Georgia">
+        content="Press kit for Denny Tsur (Yarden Tsur): award-winning composer and producer scoring animated TV broadcast worldwide, theatre, film, and pop. Bio, credits, and contact.">
 
-    <!-- Open Graph -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Denny Tsur — Composer for Film, Theatre & Animation">
-    <meta property="og:description"
-        content="Award-winning Atlanta-based composer scoring animated TV series broadcast worldwide, plus theatre, film, and pop. Eurovision finalist.">
-    <meta property="og:url" content="https://www.music-denny.com/">
-    <meta property="og:image" content="https://www.music-denny.com/assets/profile.jpg">
-    <meta name="twitter:card" content="summary_large_image">
-
-    <link rel="canonical" href="https://www.music-denny.com/">
-
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="image" href="assets/profile.jpg">
+    <link rel="preload" as="image" href="../assets/profile.jpg">
     <link
         href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600&family=Hanken+Grotesk:wght@400;500;600;700&display=swap"
         rel="stylesheet">
 
-    <link rel="stylesheet" href="styles.css?v=8">
+    <link rel="stylesheet" href="../styles.css?v=8">
 
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-C1QW25PBWS"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'G-C1QW25PBWS');
-    </script>
-
-    <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "Person",
-            "name": "Denny Tsur",
-            "alternateName": "Yarden Tsur",
-            "jobTitle": "Composer, Songwriter & Music Producer",
-            "description": "Award-winning composer and producer scoring animated TV series broadcast worldwide, plus theatre, film, and pop.",
-            "image": "https://www.music-denny.com/assets/profile.jpg",
-            "address": {
-                "@type": "PostalAddress",
-                "addressLocality": "Atlanta",
-                "addressRegion": "GA",
-                "addressCountry": "US"
-            },
-            "url": "https://www.music-denny.com/",
-            "email": "yardentsur@gmail.com",
-            "sameAs": [
-                "https://www.linkedin.com/in/yarden-tsur-64047671",
-                "https://www.instagram.com/yardentsur",
-                "https://soundcloud.com/yardenmusic",
-                "https://www.youtube.com/@YardenTsur",
-                "https://www.facebook.com/yardentsur"
-            ]
+    <style>
+        /* Press-kit-specific bits, scoped to this page */
+        .kicker {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.7em;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 1.4rem;
         }
-    </script>
+        .kicker::before { content: ""; width: 1.8rem; height: 1px; background: var(--gold-line); }
+
+        .facts {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1px;
+            background: var(--line);
+            border: 1px solid var(--line);
+            border-radius: var(--r-md);
+            overflow: hidden;
+        }
+        .facts > div { background: var(--bg-elev); padding: 1.4rem 1.5rem; }
+        .facts dt {
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 0.5rem;
+        }
+        .facts dd { font-size: 1.02rem; color: var(--ink); line-height: 1.45; }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.45em;
+            font-size: 0.92rem;
+            font-weight: 500;
+            color: var(--ink-soft);
+            text-decoration: none;
+            transition: color 0.25s var(--ease-out), gap 0.25s var(--ease-out);
+        }
+        .back-link:hover { color: var(--gold); gap: 0.7em; }
+
+        .press-note {
+            margin-top: 1.4rem;
+            font-size: 0.95rem;
+            color: var(--ink-mute);
+        }
+        @media (max-width: 900px) { .epk-hero__grid { grid-template-columns: 1fr !important; } }
+    </style>
 </head>
 
 <body>
-    <a href="#about" class="skip-link">Skip to content</a>
+    <a href="#bio" class="skip-link">Skip to content</a>
 
-    <!-- Icon sprite -->
     <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
         <symbol id="ic-linkedin" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></symbol>
         <symbol id="ic-instagram" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></symbol>
@@ -89,33 +92,32 @@
         <symbol id="ic-facebook" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></symbol>
     </svg>
 
-    <!-- Nav -->
     <header class="nav" id="nav">
         <div class="nav__inner wrap">
-            <a href="#top" class="nav__brand">Denny&nbsp;Tsur<span>.</span></a>
+            <a href="../index.html" class="back-link">← Denny&nbsp;Tsur</a>
             <nav class="nav__links" aria-label="Primary">
-                <a href="#about">About</a>
-                <a href="#work">Work</a>
+                <a href="#bio">Bio</a>
+                <a href="#credits">Credits</a>
                 <a href="#listen">Listen</a>
-                <a href="#contact" class="btn nav__cta">Get in touch</a>
+                <a href="#press" class="btn nav__cta">Contact</a>
             </nav>
         </div>
     </header>
 
     <main id="top">
         <!-- Hero -->
-        <section class="hero" aria-label="Introduction">
-            <div class="wrap hero__grid">
+        <section class="hero" aria-label="Press kit">
+            <div class="wrap hero__grid epk-hero__grid">
                 <div class="hero__animate hero__copy">
-                    <p class="hero__loc">Composer · Atlanta, GA</p>
+                    <p class="kicker">Press Kit</p>
                     <h1>Denny <em>Tsur</em></h1>
                     <p class="hero__lead">
-                        Award-winning composer and producer scoring
-                        <strong>animation, film, and theatre</strong> — with music on screens around the world.
+                        Composer, songwriter, and producer. Music for
+                        <strong>animation, film, theatre, and pop</strong> — heard on screens around the world.
                     </p>
                     <div class="hero__actions">
-                        <a href="#listen" class="btn">Listen to the work <span class="arrow">→</span></a>
-                        <a href="#contact" class="btn btn--ghost">Start a project</a>
+                        <a href="#listen" class="btn">Listen <span class="arrow">→</span></a>
+                        <a href="mailto:yardentsur@gmail.com" class="btn btn--ghost">Email Denny</a>
                     </div>
                     <div class="social" aria-label="Social profiles">
                         <a href="https://www.linkedin.com/in/yarden-tsur-64047671" target="_blank" rel="noopener" aria-label="LinkedIn">
@@ -130,35 +132,33 @@
                             <svg class="ic" aria-hidden="true"><use href="#ic-facebook"></use></svg></a>
                     </div>
                 </div>
-
                 <div class="hero__media">
                     <div class="hero__portrait">
-                        <img src="assets/profile.jpg" alt="Denny Tsur, composer, smiling" width="420" height="525">
+                        <img src="../assets/profile.jpg" alt="Denny Tsur, composer, smiling" width="420" height="525">
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <dl class="billing">
-                    <div class="billing__row">
-                        <dt>Stage</dt>
-                        <dd><b>Winnie the Pooh — the musical</b>Original score for the stage adaptation</dd>
-                    </div>
-                    <div class="billing__row">
-                        <dt>Screen</dt>
-                        <dd><b>Animated TV, scored worldwide</b>Series broadcast around the globe</dd>
-                    </div>
-                    <div class="billing__row">
-                        <dt>Live</dt>
-                        <dd><b>Eurovision 2013 finalist</b>Israel's national selection</dd>
-                    </div>
+        <!-- Quick facts -->
+        <section class="section" aria-label="At a glance">
+            <div class="wrap">
+                <dl class="facts reveal">
+                    <div><dt>Based in</dt><dd>Atlanta, Georgia, USA</dd></div>
+                    <div><dt>Origin</dt><dd>Israeli-American</dd></div>
+                    <div><dt>Specialties</dt><dd>Animation &amp; children's music, theatre, film &amp; TV scoring, pop</dd></div>
+                    <div><dt>Reach</dt><dd>Animated TV broadcast worldwide</dd></div>
+                    <div><dt>Notable</dt><dd>Eurovision 2013 national finalist (Israel)</dd></div>
+                    <div><dt>Booking</dt><dd><a href="mailto:yardentsur@gmail.com" style="color:var(--gold);text-decoration:none">yardentsur@gmail.com</a></dd></div>
                 </dl>
             </div>
         </section>
 
-        <!-- About -->
-        <section class="section" id="about" aria-labelledby="about-h">
+        <!-- Bio -->
+        <section class="section" id="bio" aria-labelledby="bio-h">
             <div class="wrap">
                 <div class="section-head reveal">
-                    <h2 id="about-h">About</h2>
+                    <h2 id="bio-h">Biography</h2>
                     <span class="rule" aria-hidden="true"></span>
                 </div>
                 <div class="about__grid">
@@ -181,23 +181,32 @@
                             in markets around the world, writing songs and themes that travel across languages and
                             cultures. Her original score for a stage production of <em>Winnie the Pooh</em> turned
                             beloved characters into full musical numbers, and her short-film soundtracks give each
-                            picture its emotional spine. A finalist in Israel's 2013 Eurovision selection, she's as at
-                            home on an international stage as she is in the writing room.</p>
-                        <p>Whatever the brief, Denny builds music with real craft and a little bit of magic — fresh,
-                            character-driven, and made to fit the exact moment it scores.</p>
+                            picture its emotional spine.</p>
+                        <p>A finalist in Israel's 2013 Eurovision selection, she's as at home on an international stage
+                            as she is in the writing room. Whatever the brief, Denny builds music with real craft and a
+                            little bit of magic — fresh, character-driven, and made to fit the exact moment it scores.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Work -->
-        <section class="section" id="work" aria-labelledby="work-h">
+        <!-- Credits -->
+        <section class="section" id="credits" aria-labelledby="credits-h">
             <div class="wrap">
                 <div class="section-head reveal">
-                    <h2 id="work-h">Selected work</h2>
+                    <h2 id="credits-h">Selected credits</h2>
                     <span class="rule" aria-hidden="true"></span>
                 </div>
                 <ul class="work__list">
+                    <li class="work__item reveal">
+                        <span class="work__year">2026</span>
+                        <div class="work__main">
+                            <h3>Animated TV Series</h3>
+                            <p>Original songs and score for animated television broadcast to audiences around the world —
+                                character-driven music that delights kids and travels across languages.</p>
+                        </div>
+                        <span class="work__tag">Television</span>
+                    </li>
                     <li class="work__item reveal">
                         <span class="work__year">2024</span>
                         <div class="work__main">
@@ -223,15 +232,6 @@
                                 stage.</p>
                         </div>
                         <span class="work__tag">Live</span>
-                    </li>
-                    <li class="work__item reveal">
-                        <span class="work__year">2026</span>
-                        <div class="work__main">
-                            <h3>Animated TV Series</h3>
-                            <p>Original songs and score for animated television broadcast to audiences around the world —
-                                character-driven music that delights kids and travels across languages.</p>
-                        </div>
-                        <span class="work__tag">Television</span>
                     </li>
                     <li class="work__item reveal">
                         <span class="work__year">Studio</span>
@@ -262,48 +262,46 @@
                         </audio>
                         <p class="player__hint">
                             <span><b id="track-count">9</b> tracks</span>
-                            <span class="player__keys">
-                                <kbd>Space</kbd> play · <kbd>←</kbd><kbd>→</kbd> skip
-                            </span>
+                            <span class="player__keys"><kbd>Space</kbd> play · <kbd>←</kbd><kbd>→</kbd> skip</span>
                         </p>
                         <a class="player__more" href="https://soundcloud.com/yardenmusic" target="_blank"
                             rel="noopener">Full catalogue on SoundCloud <span class="arrow">→</span></a>
                     </div>
 
                     <ul class="playlist" id="playlist" aria-label="Track list">
-                        <li data-src="assets/music/Winnie-The-Pooh-Opening-Instrumental.mp3" tabindex="0" role="button">
+                        <li data-src="../assets/music/Winnie-The-Pooh-Opening-Instrumental.mp3" tabindex="0" role="button">
                             <span class="num">1</span><span class="title">Winnie the Pooh — Opening (Instrumental)</span>
                             <span class="eq" aria-hidden="true"><span></span><span></span><span></span></span>
                         </li>
-                        <li data-src="assets/music/Winnie-The-Pooh-Musical-We-Found-The-Tail.mp3" tabindex="0" role="button">
+                        <li data-src="../assets/music/Winnie-The-Pooh-Musical-We-Found-The-Tail.mp3" tabindex="0" role="button">
                             <span class="num">2</span><span class="title">Winnie the Pooh — We Found the Tail</span>
                             <span class="eq" aria-hidden="true"><span></span><span></span><span></span></span>
                         </li>
-                        <li data-src="assets/music/Cheer-Up-Boy.mp3" tabindex="0" role="button">
+                        <li data-src="../assets/music/Cheer-Up-Boy.mp3" tabindex="0" role="button">
                             <span class="num">3</span><span class="title">Cheer Up, Boy</span>
                             <span class="eq" aria-hidden="true"><span></span><span></span><span></span></span>
                         </li>
-                        <li data-src="assets/music/Vikings-Musical.mp3" tabindex="0" role="button">
+                        <li data-src="../assets/music/Vikings-Musical.mp3" tabindex="0" role="button">
                             <span class="num">4</span><span class="title">Vikings — Musical</span>
                             <span class="eq" aria-hidden="true"><span></span><span></span><span></span></span>
                         </li>
-                        <li data-src="assets/music/Villains-Overture.mp3" tabindex="0" role="button">
+                        <li data-src="../assets/music/Villains-Overture.mp3" tabindex="0" role="button">
                             <span class="num">5</span><span class="title">Villain's Overture</span>
                             <span class="eq" aria-hidden="true"><span></span><span></span><span></span></span>
                         </li>
-                        <li data-src="assets/music/Winnie-The-Pooh-Musical-Piglet.mp3" tabindex="0" role="button">
+                        <li data-src="../assets/music/Winnie-The-Pooh-Musical-Piglet.mp3" tabindex="0" role="button">
                             <span class="num">6</span><span class="title">Winnie the Pooh — Piglet</span>
                             <span class="eq" aria-hidden="true"><span></span><span></span><span></span></span>
                         </li>
-                        <li data-src="assets/music/Winnie-The-Pooh-Musical-The-Scary-Wood.mp3" tabindex="0" role="button">
+                        <li data-src="../assets/music/Winnie-The-Pooh-Musical-The-Scary-Wood.mp3" tabindex="0" role="button">
                             <span class="num">7</span><span class="title">Winnie the Pooh — The Scary Woods</span>
                             <span class="eq" aria-hidden="true"><span></span><span></span><span></span></span>
                         </li>
-                        <li data-src="assets/music/Fighting-for-Home.mp3" tabindex="0" role="button">
+                        <li data-src="../assets/music/Fighting-for-Home.mp3" tabindex="0" role="button">
                             <span class="num">8</span><span class="title">Fighting for Home</span>
                             <span class="eq" aria-hidden="true"><span></span><span></span><span></span></span>
                         </li>
-                        <li data-src="assets/music/Battlefront-Earth.mp3" tabindex="0" role="button">
+                        <li data-src="../assets/music/Battlefront-Earth.mp3" tabindex="0" role="button">
                             <span class="num">9</span><span class="title">Battlefront Earth</span>
                             <span class="eq" aria-hidden="true"><span></span><span></span><span></span></span>
                         </li>
@@ -312,11 +310,12 @@
             </div>
         </section>
 
-        <!-- Contact -->
-        <section class="section contact" id="contact" aria-labelledby="contact-h">
+        <!-- Press / contact -->
+        <section class="section contact" id="press" aria-labelledby="press-h">
             <div class="wrap contact__inner reveal">
-                <h2 id="contact-h">Let's make something <em>unforgettable.</em></h2>
-                <p>Have a film, show, campaign, or record that needs a score? I'd love to hear about it.</p>
+                <h2 id="press-h">For press &amp; <em>bookings</em></h2>
+                <p>Bio, credits, and music above are free to use. High-resolution photos and additional materials are
+                    available on request.</p>
                 <a href="mailto:yardentsur@gmail.com" class="contact__email">yardentsur@gmail.com</a>
                 <div class="social" aria-label="Social profiles">
                     <a href="https://www.linkedin.com/in/yarden-tsur-64047671" target="_blank" rel="noopener" aria-label="LinkedIn">
@@ -330,18 +329,19 @@
                     <a href="https://www.facebook.com/yardentsur" target="_blank" rel="noopener" aria-label="Facebook">
                         <svg class="ic" aria-hidden="true"><use href="#ic-facebook"></use></svg></a>
                 </div>
+                <p class="press-note"><a href="../index.html" class="back-link">← Back to main site</a></p>
             </div>
         </section>
     </main>
 
     <footer class="footer">
         <div class="wrap">
-            <p class="footer__name">Denny Tsur · Yarden Tsur</p>
+            <p class="footer__name">Denny Tsur · Yarden Tsur — Press Kit</p>
             <p>&copy; <span id="year">2026</span> Denny Tsur. All rights reserved.</p>
         </div>
     </footer>
 
-    <script src="scripts.js?v=6"></script>
+    <script src="../scripts.js?v=6"></script>
 </body>
 
 </html>
